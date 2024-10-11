@@ -1,6 +1,7 @@
 package com.springbootpractice.schoolmanagementsystem.Student;
 
 import com.springbootpractice.schoolmanagementsystem.constants.DummyRequest;
+import com.springbootpractice.schoolmanagementsystem.constants.StudentRequestModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,9 @@ public class StudentService {
      return studentRepository.save(student);
     }
 
+    public Student saveStudent(Student student) {
+      return studentRepository.save(student);
+    }
     public void deleteStudent(DummyRequest request) {
         studentRepository.deleteById(request.getId());
     }
